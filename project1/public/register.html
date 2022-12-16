@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Register</title>
+        <link rel="icon" type="favicon" href="images/favicon.ico"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header class="nav-bar">
+            <div class="nav-left">
+                <div class="header">
+                    <a href="/">
+                        <img clas="header-logo" src="images/logo.png" height="40" width="40" alt="Logo" />
+                    </a>
+                    <h1 class="header-text">Ducklings</h1>
+                </div>
+            </div>
+
+            <nav class="nav-right">
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">About 🔻</button>
+                    <div class="dropdown-content">
+                        <a href="about.html">Facts about Ducks</a>
+                        <a href="volunteer.html">Volunteer</a>
+                        <a href="donation.html">Ways to Give</a>
+                        <a href="internship.html">The Internship</a>
+                    </div>
+                </div>
+                <a href="register.html">Register</a>
+            </nav>
+        </header>
+        <main class="register-main">
+            <h2 class="register-title">Account Registration</h2>
+            <div class="register-container">
+                <form action="http://localhost:3000/register/" method="post">
+                    <div class="name">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Name">
+                    </div>
+                    <div class="email">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required placeholder="E-mail">
+                    </div>
+                    <div class="tier">
+                        <label for="tier">Choose a sponsorship*</label>
+                        <select id="tier" name="tier" required>
+                            <option disabled selected value>Plese select</option>
+                            <option value="1">Standard</option>
+                            <option value="2">Silver</option>
+                            <option value="3">Gold</option>
+                            <option value="4">Platinum</option>
+                        </select>
+                    </div>
+                    <div class="subscribe">
+                        <input type="checkbox" id="annoy_me" name="annoy_me" checked>
+                        <label for="annoy_me">Do you want us to send you annoying emails?</label>
+                    </div>
+                    <button type="submit" value="Register">Register</button>
+                </form>
+            </div>
+            <div class="register-ducks"><span>🦆</span></div>
+        </main>
+        <footer>
+            <div class="footer-ducks"><span class="big-duck">🦆</span><span class="small-ducks">🦆🦆🦆🦆🦆</span>
+            </div>
+            <a href="privacy.html">Privacy
+                Policy</a>
+            <a href="contact.html">Contact us</a>
+            <a href="terms.html">Site Terms</a>
+        </footer>
+    </body>
+
+</html>

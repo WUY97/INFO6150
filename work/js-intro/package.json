@@ -1,0 +1,12 @@
+{
+  "name": "js-intro",
+  "version": "1.0.0",
+  "description": "**Due: Mon Oct 24, 11:59pm PT**",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

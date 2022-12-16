@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Famous Internet Cats</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://css.gg/menu.css' rel='stylesheet'>
+    </head>
+
+    <body>
+        <header class="nav-bar">
+            <div class="nav-left">
+                <div class="header">
+                    <a href="/">
+                        <img clas="header-logo" src="http://placekitten.com/g/100/100" width=100 height=100
+                            alt="Logo" />
+                    </a>
+                    <h1 class="header-text">Famous Internet Cats</h1>
+                </div>
+            </div>
+            <nav class="nav-right">
+                <div class="dropdown">
+                    <div id="dropbtn">
+                        <i class="gg-menu"></i>
+                    </div>
+                    <div class="dropdown-content" id="dropdownList">
+                        <a href="/">Home</a>
+                        <a class="skip-to-content-link" href="#main">Skip to content</a>
+                        <a href="cats.html">Famous Cats</a>
+                        <a href="events.html">Cat Events</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="cat-main" id="main">
+            <div class="cat-card">
+                <h2 class="cat-title">Jorts</h2>
+                <img class="cat-image" src="http://placekitten.com/g/300/300" width=200 height=200 alt="Cat in snow" />
+                <p>Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                <p>Ipsum lorem sit <button class="subscribeLink">Subscribe</button> voluptate inventore.</p>
+            </div>
+            <div class="cat-card">
+                <h2 class="cat-title">Jean</h2>
+                <img class="cat-image" src="http://placekitten.com/g/223/223" width=200 height=200 alt="Standing cat" />
+                <p>Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                <p>Ipsum lorem sit <button class="subscribeLink">Subscribe</button> voluptate inventore.</p>
+            </div>
+            <div class="cat-card">
+                <h2 class="cat-title">Maru</h2>
+                <img class="cat-image" src="http://placekitten.com/g/1300/1300" width=200 height=200
+                    alt="Sitting cat" />
+                <p>Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                <p>Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                <p>Ipsum lorem sit <button class="subscribeLink">Subscribe</button> voluptate inventore.</p>
+            </div>
+            <div class="cat-card">
+                <h2 class="cat-title">Nyancat</h2>
+                <img class="cat-image" src="http://placekitten.com/g/1100/1100" width=200 height=200
+                    alt="Playing cat" />
+                <p>Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                <p>Ipsum lorem sit <button class="subscribeLink">Subscribe</button> voluptate inventore.</p>
+            </div>
+            <div class="cat-card">
+                <h2 class="cat-title">Grumpy Cat</h2>
+                <img class="cat-image" src="http://placekitten.com/g/400/400" width=200 height=200 alt="Cute cat" />
+                <p>Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                <p>Ipsum lorem sit <button class="subscribeLink">Subscribe</button> voluptate inventore.</p>
+            </div>
+            <div class="cat-card">
+                <h2 class="cat-title">Lil Bub</h2>
+                <img class="cat-image" src="http://placekitten.com/g/203/203" width=200 height=200 alt="Resting cat" />
+                <p>Dolor nulla repellendus quisquam optio in. In optio distinctio doloremque</p>
+                <p>Ipsum lorem sit <button class="subscribeLink">Subscribe</button> voluptate inventore.</p>
+            </div>
+
+            <dialog id="subscribeModal" class="modal">
+                <div class="modal-content">
+                    <h2>Subscribe to the Latest Mews!</h2>
+                    <div class="form-container">
+                        <form name="subscription" action="http://localhost:3000/subscribe/" method="post">
+                            <div class="email">
+                                <label for="email">E-mail <i>* required</i></label>
+                                <input type="text" id="email-input" name="Email">
+                                <div id="email-error"></div>
+                            </div>
+
+                            <div class="confirm-email">
+                                <label for="confirm-email">Confirm E-mail <i>* required</i></label>
+                                <input type="text" id="confirm-email-input" name="ConfirmEmail">
+                                <div id="confirm-email-error"></div>
+                            </div>
+                            <div class="buttons">
+                                <button id="subscribeBtn" class="submit" type="submit"
+                                    value="Subscribe">Subscribe</button>
+                                <button class="close" id="close">Cancel</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </dialog>
+        </main>
+        <footer>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="jobs.html">Work for Us</a>
+            <a href="contact.html">Contact us</a>
+            <a href="social.html">Social Media</a>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+
+</html>

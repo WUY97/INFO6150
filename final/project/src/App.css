@@ -1,0 +1,413 @@
+/* below CSS adapted from https://css.gg under the MIT License */
+@import url('https://css.gg/menu.css');
+
+main {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 44rem) {
+    main {
+        width: 80%;
+        margin: auto;
+        padding: 5rem 10% 2rem 10%;
+    }
+}
+
+.main-container {
+    margin: auto;
+    max-width: 50rem;    
+}
+
+h2 {
+    padding: 2rem 0 2rem 0;
+}
+
+@media screen and (min-width: 44rem) {
+    h2 {
+        margin: auto;
+    }
+}
+
+/* navmenu √√*/
+.nav-bar {
+    position: sticky;
+    display: grid;
+    top: 0;
+    grid-template-columns: 7fr 1fr;
+    box-shadow: 0rem 0.2rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
+    z-index: 99999;
+}
+
+.nav-left {
+    grid-column: 1;
+    height: 100px;
+}
+
+.header-logo {
+    width: 100px;
+}
+
+.header {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.skip-to-content-link {
+    top: -10rem;
+    position: absolute;
+}
+
+.skip-to-content-link:focus {
+    top: -6rem;
+}
+
+.nav-right {
+    display: flex;
+    grid-column: 2;
+    overflow: hidden;
+}
+
+.dropdown {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#dropbtn {
+    height: 100%;
+}
+
+.dropdown-content {
+    width: auto;
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+}
+
+.dropdown-content button {
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (min-width: 44rem) {
+    .nav-bar {
+        box-shadow: 0rem 1.5rem 1.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+    .nav-left {
+        grid-column: 1/2;
+        width: 100%;
+    }
+
+    .nav-right {
+        grid-column: 1/2;
+        width: 100%;
+    }
+
+    .dropdown {
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        justify-content: flex-start;
+    }
+
+    #dropbtn {
+        display: none;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* Homepage */
+
+.card1,
+.card2 {
+    padding: 0.5rem;
+}
+
+.card1 h2,
+.card2 h2 {
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+}
+
+.card1 p,
+.card2 p {
+    margin-bottom: 1rem;
+}
+
+.card1 img {
+    float:right;
+    height: 125px;
+    width: auto;
+    margin: 0 0 0.5rem 0.5rem;
+}
+
+.card2 img {
+    float: left;
+    height: 125px;
+    width: auto;
+    margin: 0 0.5rem 0.5rem 0;
+}
+
+.card1 button, .card2 button {
+    margin-left: 50%
+}
+
+@media screen and (min-width: 44rem) {
+    .card1 {
+        margin-bottom: 1rem;
+    }
+
+    .card1,
+    .card2 {
+        min-height: 200px;
+    }
+
+    .card1 img,
+    .card2 img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .card1 button, .card2 button {
+        margin-left: 50%;
+        width: 10rem;
+    }
+}
+
+/* Card Page */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1rem;
+}
+
+.card {
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+    padding: 0 0 0.5rem 0;
+}
+
+.card-image {
+    height: auto;
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+.card-title {
+    text-align: center;
+    padding: 0;
+}
+
+.card :not(:first-child) {
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+@media screen and (min-width: 44rem) {
+    .card-container {
+        display: grid;
+        column-gap: 2rem;
+        row-gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-image {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content {
+    margin: 15rem auto;
+    width: 80%;
+    opacity: 1;
+    border-radius: 1.5rem;
+}
+
+.modal-text {
+    padding: 1rem;
+    display: grid;
+    row-gap: 1rem;
+}
+
+.modal-image {
+    float: top;
+    width: 100%;
+    height: auto;
+    top: 0;
+    border-radius: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 44rem) {
+    .modal-content {
+        width: 70%;
+    }
+
+    .modal-text {
+        padding: 2rem;
+    }
+
+    .modal-image {
+        float: right;
+        right: 0;
+        width: auto;
+        height: 100%;
+        border-radius: 0 1.5rem 0 1.5rem;
+    }
+}
+
+/* Footer */
+footer {
+    display: grid;
+    row-gap: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 -0.2rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 44rem) {
+    footer {
+        padding: 2rem;
+    }
+
+    .left-footer {
+        display: flex;
+        column-gap: 1rem;
+    }
+    .right-footer {
+        display: flex;
+        column-gap: 1rem;
+    }
+}
+
+/* Panels */
+.panel-container {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.panel {
+    border-radius: 1.5rem;
+    box-shadow: 0rem 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.panel :first-child {
+    padding-top: 1rem;
+}
+
+.panel :not(:last-child) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.panel-map {
+    float: bottom;
+    bottom: 0;
+    border: 0;
+    width: 100%;
+    height: 250px;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+@media screen and (min-width: 44rem) {
+    .panel-container {
+        row-gap: 2rem;
+        margin: auto;
+    }
+
+    .panel-map {
+        height: 250px;
+        width: 100%;
+    }
+}
+
+/* Forms */
+.form-container {
+    padding: 1.5rem;
+    display: grid;
+    row-gap: 1rem;
+    border-radius: 1.5rem;
+}
+
+.form {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.form-text-item,
+.form-select-item {
+    display: grid;
+    row-gap: 0.3rem;
+    align-items: center;
+}
+
+.form-check-item {
+    display: flex;
+    align-items: center;
+}
+
+.tertiary-container {
+    position: absolute;
+    padding: 1rem;
+    border-radius: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+@media screen and (min-width: 44rem) {
+    .form-container {
+        padding: 2rem;
+        border-radius: 2rem;
+        margin: 0 auto;
+    }
+
+    .form-text-item,
+    .form-select-item {
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+    }
+
+    .form-text-item label,
+    .form-select-item label {
+        width: 100%;
+    }
+
+    .form-text-item input,
+    .form-select-item select {
+        width: 100%;
+    }
+}

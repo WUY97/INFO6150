@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JS Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+    <body>
+        <header class="nav-bar">
+            <div class="nav-left">
+                <div class="header">
+                    <h1 class="header-text">JS Form</h1>
+                </div>
+            </div>
+
+            <nav class="nav-right">
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <h2>Account Registration</h2>
+            <div class="form-container">
+                <form name="registration" action="http://localhost:3000/register/" method="post">
+                    <div class="name">
+                        <label for="name">Name *</label>
+                        <input id="name-input" type="text" id="name" name="Name" placeholder="Name">
+                    </div>
+                    <div id="name-error">Please enter your name properly.</div>
+
+                    <div class="email">
+                        <label for="email">E-mail *</label>
+                        <input type="text" id="email" name="Email" placeholder="E-mail">
+                    </div>
+                    <div id="email-error"></div>
+
+                    <div class="confirm-email">
+                        <label for="confirm-email">Confirm E-mail *</label>
+                        <input type="text" id="confirm-email" name="ConfirmEmail" placeholder="Confirm E-mail">
+                    </div>
+                    <div id="confirm-email-error"></div>
+
+                    <div class="tier">
+                        <label for="tier">Choose a tier</label>
+                        <select id="tier" name="Tier">
+                            <option disabled selected value>Plese select</option>
+                            <option value="1">Silver Tier</option>
+                            <option value="2">Gold Tier</option>
+                            <option value="3">Platinum Tier</option>
+                        </select>
+                    </div>
+
+                    <div class="wants-spam">
+                        <input type="checkbox" id="wants-spam" name="wants-spam" checked>
+                        <label for="wants-spam">Do you want us to send you annoying emails?</label>
+                    </div>
+
+                    <button id="registerBtn" type="submit" value="Register">Register</button>
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            </div>
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">Privacy
+                Policy</a>
+            <a href="https://support.github.com/?tags=dotcom-footer">Contact us</a>
+            <a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service">Site Terms</a>
+        </footer>
+        <script charset="utf-8" type="text/javascript" src="index.js"></script>
+    </body>
+
+</html>

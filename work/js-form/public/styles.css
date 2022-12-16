@@ -1,0 +1,233 @@
+html * {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    color: #002056;
+    font-style: oblique;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+h2 {
+    color: #fff;
+    font-style: oblique;
+    width: calc(100% - 2rem);
+    padding: 2rem 1rem 2rem 1rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-left {
+    grid-column: 1/3;
+}
+
+.header {
+    padding: 0.5rem 10% 0.5rem 10%;
+    display: flex;
+}
+
+.header-text {
+    margin-left: 1rem;
+}
+
+.nav-right {
+    display: flex;
+    grid-column: 1/3;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+.nav-right a {
+    font-size: 1rem;
+    color: #002056;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    text-decoration: none;
+    width: 33%;
+}
+
+.nav-right a:hover,
+.nav-right a:focus-within {
+    background-color: #3389da;
+    color: #fff;
+}
+
+.main-content {
+    background-color: #3389da;
+    opacity: 0.8;
+    background: linear-gradient(135deg, #04509955 25%, transparent 25%) -26px 0/
+            52px 52px,
+        linear-gradient(225deg, #045099 25%, transparent 25%) -26px 0/ 52px 52px,
+        linear-gradient(315deg, #04509955 25%, transparent 25%) 0px 0/ 52px 52px,
+        linear-gradient(45deg, #045099 25%, #3389da 25%) 0px 0/ 52px 52px;
+    padding: 25% 15% 15% 15%;
+}
+
+.form-container {
+    background-color: white;
+    margin: auto 1rem 2rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: left;
+}
+
+.name,
+.email,
+.confirm-email,
+.wants-spam,
+.tier {
+    display: block;
+    width: 100%;
+}
+
+.email,
+.confirm-email,
+.wants-spam,
+.tier {
+    margin-top: 2rem;
+}
+
+.name input,
+.email input,
+.confirm-email input,
+.tier input,
+select {
+    width: 100%;
+    height: 2.5rem;
+}
+
+#name-error {
+    display: none;
+}
+
+#name-error,
+#email-error,
+#confirm-email-error {
+    color: red;
+}
+
+.form-container button {
+    width: 100%;
+    background-color: #045099;
+    margin-top: 2rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 1rem;
+}
+
+.form-container button:hover {
+    background-color: #3389da;
+    color: #045099;
+    cursor: pointer;
+}
+
+footer {
+    margin: 2rem 0 2rem 0;
+    padding: 0 15% 0 15%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (pointer: coarse) {
+    input[type='checkbox'] {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 40rem) {
+    .main-content {
+        padding: 10% 20% 7% 20%;
+    }
+
+    h2 {
+        /* padding-top: 20vh; */
+        font-size: 3rem;
+    }
+
+    .nav-left {
+        grid-column: 1;
+    }
+
+    .nav-right {
+        grid-column: 2;
+    }
+
+    .form-container {
+        padding: 3.75rem;
+    }
+
+    .form-container form {
+        height: 100%;
+        column-gap: 4rem;
+        align-items: center;
+    }
+
+    .name,
+    .email,
+    .confirm-email,
+    .wants-spam,
+    .tier {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .name label,
+    .email label,
+    .confirm-email label,
+    .wants-spam input,
+    .tier label {
+        display: inline-block;
+        width: 25%;
+    }
+
+    .name input,
+    .email input,
+    .confirm-email input,
+    .tier input,
+    .wants-spam label,
+    select {
+        display: inline-block;
+        width: 80%;
+        height: 2.5rem;
+    }
+
+    .form-container button {
+        grid-column: 1/3;
+        width: 100%;
+    }
+
+    footer {
+        height: calc(100% - 90vh);
+        padding: 0 20% 0 20%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}

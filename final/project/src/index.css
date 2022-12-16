@@ -1,0 +1,488 @@
+html * {
+    margin: 0;
+}
+
+:root {
+    --light--primary: #5e6300;
+    --light--on--primary: #ffffff;
+    --light--primary--container: #e2eb4c;
+    --light--on--primary--container: #1b1d00;
+    --light--secondary: #5f613b;
+    --light--on--secondary: #ffffff;
+    --light--secondary--container: #e4e6b6;
+    --light--on--secondary--container: #1b1d02;
+    --light--tertiary: #2a6957;
+    --light--on--tertiary: #ffffff;
+    --light--tertiary--container: #80f0d9;
+    --light--on--tertiary--container: #002018;
+    --light--error: #8a1a1a;
+    --light--on-error: #ffffff;
+    --light--error--container: #ffdad6;
+    --light--on-error--container: #410002;
+    --light--background: #ffffd4;
+    --light--on--background: #1c1c17;
+    --light--surface: #ffffd4;
+    --light--on--surface: #1c1c17;
+    --light--surface--variant: #e5e3d2;
+    --light--on--surface--variant: #47473b;
+    --light--outline: #787869;
+    --light--outline--variant: #cac4d0;
+
+    --dark--primary: #c5cf30;
+    --dark--on--primary: #303300;
+    --dark--primary--container: #464a00;
+    --dark--on--primary--container: #e2eb4c;
+    --dark--secondary: #c8c99c;
+    --dark--on--secondary: #303212;
+    --dark--secondary--container: #474926;
+    --dark--on--secondary--container: #e4e6b6;
+    --dark--tertiary: #94d3bd;
+    --dark--on--tertiary: #00382b;
+    --dark--tertiary--container: #095040;
+    --dark--on--tertiary--container: #b0f0d9;
+    --dark--error: #ffb4ab;
+    --dark--on-error: #690005;
+    --dark--error--container: #93000a;
+    --dark--on-error--container: #ffb4ab;
+    --dark--background: #1c1c17;
+    --dark--on--background: #e5e2da;
+    --dark--surface: #1c1c17;
+    --dark--on--surface: #e5e2da;
+    --dark--surface--variant: #47473b;
+    --dark--on--surface--variant: #c9c7b6;
+    --dark--outline: #929182;
+    --dark--outline--variant: #49454f;
+}
+
+/* header */
+.light header {
+    background-color: var(--light--secondary--container);
+}
+
+.dark header {
+    background-color: var(--dark--secondary--container);
+}
+
+.light .dropdown-content {
+    background-color: var(--light--secondary--container);
+}
+
+.dark .dropdown-content {
+    background-color: var(--dark--secondary--container);
+}
+
+/* main */
+.light main {
+    background-color: #ffffff;
+}
+
+.dark main {
+    background-color: var(--dark--background);
+}
+
+/* header */
+.light footer {
+    background-color: var(--light--secondary--container);
+}
+
+.dark footer {
+    background-color: var(--dark--secondary--container);
+}
+
+.light footer a {
+    color: var(--light--on--secondary--container) !important;
+}
+
+.dark footer a {
+    color: var(--dark--on--secondary--container) !important;
+}
+
+/* h1 h2 h3 p a */
+body,
+a,
+button,
+label,
+input,
+select,
+textarea,
+ul,
+li {
+    font-family: 'Cardo', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.light h1 {
+    color: var(--light--on--secondary--container);
+}
+
+.dark h1 {
+    color: var(--dark--on--secondary--container);
+}
+
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6 .light p,
+.light label,
+.light a,
+.light ul,
+.light li {
+    color: var(--light--on--background);
+}
+
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark p,
+.dark label,
+.dark a,
+.dark ul,
+.dark li {
+    color: var(--dark--on--background);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a {
+        transition: 0.1s;
+    }
+}
+
+/* buttons */
+button {
+    border: 1px solid;
+    border-radius: 4rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+@media (pointer: coarse) {
+    button {
+        padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    }
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    button:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+    }
+    
+    @keyframes ripple {
+        0% {
+            transform: scale(0, 0);
+            opacity: 1;
+        }
+        20% {
+            transform: scale(25, 25);
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: scale(40, 40);
+        }
+    }
+    
+    button:focus:not(:active)::after {
+        animation: ripple 1s ease-out;
+    }
+}
+
+
+
+/* filled buttons */
+.filled-button {
+    border: 0;
+}
+
+.light .filled-button:enabled {
+    background-color: var(--light--primary);
+    color: var(--light--on--primary);
+}
+
+.light .filled-button:hover {
+    background-color: var(--light--on--surface--variant);
+    color: var(--light--on--primary);
+}
+
+.light .filled-button:focus-within {
+    background-color: var(--light--primary);
+    color: var(--light--on--primary);
+}
+
+.light .filled-button:disabled {
+    background-color: var(--light--surface);
+    color: var(--light--on--surface);
+}
+
+.dark .filled-button:enabled {
+    background-color: var(--dark--primary);
+    color: var(--dark--on--primary);
+}
+
+.dark .filled-button:hover {
+    background-color: var(--dark--on--surface--variant);
+    color: var(--dark--on--primary);
+}
+
+.dark .filled-button:focus-within {
+    background-color: var(--dark--primary);
+    color: var(--dark--on--primary);
+}
+
+.dark .filled-button:disabled {
+    background-color: var(--dark--surface);
+    color: var(--dark--on--surface);
+}
+
+/* outlined buttons */
+.light .outlined-button:enabled {
+    background-color: var(--light--background);
+    color: var(--light--primary);
+    border-color: var(--light--outline);
+}
+
+.light .outlined-button:hover {
+    background-color: var(--light--on--primary);
+    color: var(--light--primary);
+    border-color: var(--light--outline);
+}
+
+.light .outlined-button:focus-within {
+    background-color: var(--light--on--primary);
+    color: var(--light--primary);
+    border-color: var(--light--outline);
+}
+
+.light .outlined-button:disabled {
+    background-color: var(--light--background);
+    color: var(--light--on--surface);
+    border-color: var(--light--surface);
+}
+
+.dark .outlined-button:enabled {
+    background-color: var(--dark--background);
+    color: var(--dark--primary);
+    border-color: var(--dark--outline);
+}
+
+.dark .outlined-button:hover {
+    background-color: var(--dark--on--primary);
+    color: var(--dark--primary);
+    border-color: var(--dark--outline);
+}
+
+.dark .outlined-button:focus-within {
+    background-color: var(--dark--on--primary);
+    color: var(--dark--primary);
+    border-color: var(--dark--outline);
+}
+
+.dark .outlined-button:disabled {
+    background-color: var(--dark--background);
+    color: var(--dark--on--surface);
+    border-color: var(--dark--surface);
+}
+
+/* text buttons */
+.text-button {
+    border: 0;
+}
+
+.light .text-button:enabled {
+    background-color: var(--light--secondary--container);
+    color: var(--light--primary);
+}
+
+.light .text-button:hover {
+    background-color: var(--light--surface--variant);
+    color: var(--light--primary);
+}
+
+.light .text-button:focus-within {
+    background-color: var(--light--surface--variant);
+    color: var(--light--primary);
+}
+
+.light .text-button:disabled {
+    background-color: var(--light--secondary--container);
+    color: var(--light--on--surface);
+}
+
+.dark .text-button:enabled {
+    background-color: var(--dark--secondary--container);
+    color: var(--dark--primary);
+}
+
+.dark .text-button:hover {
+    background-color: var(--dark--surface--variant);
+    color: var(--dark--primary);
+}
+
+.dark .text-button:focus-within {
+    background-color: var(--dark--surface--variant);
+    color: var(--dark--primary);
+}
+
+.dark .text-button:disabled {
+    background-color: var(--dark--secondary--container);
+    color: var(--dark--on--surface);
+}
+
+/* Cards */
+.light .card {
+    background-color: var(--light--primary--container);
+}
+
+.dark .card {
+    background-color: var(--dark--primary--container);
+}
+
+/* Modals */
+.light .modal {
+    background-color: rgba(28, 28, 23, 0.5);
+}
+
+.light .modal-content {
+    background-color: var(--light--secondary--container);
+}
+
+.dark .modal {
+    background-color: rgba(229, 226, 218, 0.5);
+}
+
+.dark .modal-content {
+    background-color: var(--dark--secondary--container);
+}
+
+/* Panels */
+.light .panel {
+    background-color: var(--light--secondary--container);
+}
+
+.dark .panel {
+    background-color: var(--dark--secondary--container);
+}
+
+/* Forms */
+.light .form-container {
+    background-color: var(--light--secondary--container);
+}
+
+.dark .form-container {
+    background-color: var(--dark--secondary--container);
+}
+
+.light .error-message,
+.light .required-message {
+    color: var(--light--error);
+}
+
+.dark .error-message,
+.dark .required-message {
+    color: var(--dark--error);
+}
+
+.light .tertiary-container {
+    background-color: var(--light--tertiary--container);
+    color: var(--light--on--tertiary--container);
+}
+
+.dark .tertiary-container {
+    background-color: var(--dark--tertiary--container);
+    color: var(--dark--on--tertiary--container);
+}
+
+/* Input & Select */
+input {
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border-width: 0.1rem;
+}
+
+input[type='checkbox'] {
+    margin: 1rem;
+}
+
+@media (pointer: coarse) {
+    input[type='checkbox'] {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    input {
+        height: 3rem;
+    }
+
+    select {
+        height: 3rem;
+    }
+}
+
+select {
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border-width: 0.1rem;
+}
+
+.light input,
+.light select {
+    background-color: #ffffff;
+    border-color: var(--light--outline);
+    color: var(--light--on--background);
+}
+
+.light input ::placeholder {
+    color: var(--light--on--background);
+}
+
+.dark input,
+.dark select {
+    background-color: var(--dark--background);
+    border-color: var(--dark--outline);
+    color: var(--dark--on--background);
+}
+
+.dark input ::placeholder {
+    color: var(--dark--on--background);
+}
+
+/* homepage card */
+.light .card1,
+.light .card2 {
+    border-color: var(--light--outline--variant);
+}
+
+.dark .card1,
+.dark .card2 {
+    border-color: var(--dark--outline--variant);
+}

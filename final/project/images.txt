@@ -1,0 +1,10 @@
+kittens.jpg: https://unsplash.com/photos/rplhB9mYF48
+cat-and-human.jpg: https://unsplash.com/photos/YSNhvOxyfek
+logo.ico & logo.jpg: https://unsplash.com/photos/IuJc2qh2TcA
+
+http://placekitten.com/g/300/300
+http://placekitten.com/g/301/301
+http://placekitten.com/g/302/302
+http://placekitten.com/g/303/303
+http://placekitten.com/g/303/304
+http://placekitten.com/g/305/305
